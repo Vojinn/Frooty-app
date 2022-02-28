@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct FrootyApp: App {
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingVIew()
+            if isOnboarding {
+                OnboardingVIew()
+            } else {
+                ContentView()
+            }
         }
     }
 }
