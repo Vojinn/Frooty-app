@@ -58,7 +58,7 @@ struct FruitDetailView: View {
                 .navigationBarHidden(true)
             } //: SCROLL
             .edgesIgnoringSafeArea(.top)
-        } //: NAVIGATION
+        } .navigationViewStyle(StackNavigationViewStyle())  //: NAVIGATION
     }
 }
 
@@ -67,6 +67,5 @@ struct FruitDetailView: View {
 struct FruitDetailView_Previews: PreviewProvider {
     static var previews: some View {
         FruitDetailView(fruit: fruitsData[0])
-            .previewDevice("iPhone 13 Pro")
     }
 }
